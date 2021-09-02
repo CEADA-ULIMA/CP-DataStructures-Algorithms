@@ -5,11 +5,18 @@ typedef vector<int> vi;
 typedef vector<pii> vpii;
 const int N = 3e5;
 
-vpii AdjList[N];
 /*
-    Implementación con lista de adyacencia 
+    Implementacion parecida a traversal/bfs.cpp 
+    PrintPath muestra el camino más corto
+    El grafo que se está presentando es sin pesos 
 */
-
+vpii AdjList[N];
+vi p(N, 0);
+void printPath(int u, int source){
+    if(u == source){cout << to_string(source) + " "; return;}
+    printPath(p[u], source);
+    cout << to_string(u) + " "; 
+}
 void bfs(int n){
     vi d(N, INT_MAX); d[n] = 0;
     queue<int> q; q.push(n);
@@ -20,10 +27,11 @@ void bfs(int n){
             pii v = AdjList[u][i];
             if(d[v.first] == INT_MAX){
                 d[v.first] = d[u] + 1;
+                p[v.first] = u;
                 q.push(v.first);
-            }
-        }
-    }
+    }}}
+    //muestra el camino más corto de 0 hasta 4
+    printPath(4,0); cout << endl; 
 }
 
 int main()
