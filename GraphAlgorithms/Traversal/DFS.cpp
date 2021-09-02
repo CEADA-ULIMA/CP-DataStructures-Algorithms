@@ -15,7 +15,7 @@ vpii AdjList[N];
 vi vis;
 
 void dfs(int n){
-    cout << n << " "; 
+    //cout << n << " "; 
     vis[n] = 1;
     for(int i = 0; i < AdjList[n].size(); i++){
         pii v = AdjList[n][i];
