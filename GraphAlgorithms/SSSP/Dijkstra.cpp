@@ -33,9 +33,8 @@ int main(){
     adj[3] = {{1,3} , {2,7} , {4,5}};
     adj[4] = {{0,1} , {1,6} , {3,5}};
     dijkstra(2);
-    cout << "Desde el vertice 2 las distancias son: " << endl;
     for(int i = 0; i < 5 ; i++){
-        cout << "v:" << i << " dist: " << dist[i] << '\n';
+        cout << dist[i] << ' ';
     }
     return 0;
 }

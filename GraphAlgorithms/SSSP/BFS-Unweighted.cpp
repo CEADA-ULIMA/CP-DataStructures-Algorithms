@@ -8,8 +8,9 @@ const int N = 3e5;
 /*
     Implementacion parecida a traversal/bfs.cpp 
     PrintPath muestra el camino más corto
-    El grafo que se está presentando es sin pesos 
+    El algoritmo solamente funciona en grafo que tengan pesos iguales o que no tengan pesos
 */
+
 vpii AdjList[N];
 vi p(N, 0);
 void printPath(int u, int source){
