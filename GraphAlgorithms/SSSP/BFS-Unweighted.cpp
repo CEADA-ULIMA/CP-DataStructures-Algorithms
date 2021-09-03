@@ -18,6 +18,7 @@ void printPath(int u, int source){
     printPath(p[u], source);
     cout << to_string(u) + " "; 
 }
+//O(V + E)
 void bfs(int n){
     vi d(N, INT_MAX); d[n] = 0;
     queue<int> q; q.push(n);

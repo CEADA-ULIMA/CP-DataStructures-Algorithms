@@ -9,6 +9,7 @@ vpii adj[N];
 vi dist(N, INT_MAX);
 priority_queue<pii , vector<pii> , greater<pii>> pq;
 
+//O((V + E)log V) además usa memoria extra (tener cuidado)
 void dijkstra(int s){
     dist[s] = 0;
     pq.push({0 , s});
